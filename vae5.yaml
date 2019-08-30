@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: vae5
+spec:
+  restartPolicy: OnFailure
+  containers:
+  - name: vae5
+    image: zsl3203/vae
+    command: ["./run.sh"]
+    imagePullPolicy: IfNotPresent
+    resources:
+      requests:
+        cpu: "3"
